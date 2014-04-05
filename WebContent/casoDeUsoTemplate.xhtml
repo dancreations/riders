@@ -1,0 +1,18 @@
+<ui:composition template="/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="body">
+		<h:panelGrid columns="2" columnClasses="panelMain,panelMain">
+			<rich:panel style="width:250px;text-align:left;">
+				<ui:include src="/pages/menu.xhtml"></ui:include>
+			</rich:panel>
+			<ui:insert name="cubody">
+			</ui:insert>
+		</h:panelGrid>
+	</ui:define>
+</ui:composition>

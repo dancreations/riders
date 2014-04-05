@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+
+.column_center {
+	text-align: center;
+}
+
+.warning {
+	color: red;
+}
+
+.panelMain {
+	top: 5px;
+	vertical-align: top;
+}

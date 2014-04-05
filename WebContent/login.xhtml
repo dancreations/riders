@@ -1,0 +1,41 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	template="/template.xhtml" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<ui:define name="body">
+		<a4j:form>
+			<rich:panel>
+				<f:facet name="header">
+					<h:outputText value="Repuestos Riders" />
+				</f:facet>
+
+				<h:panelGrid columns="3">
+
+					<h:outputText value="Email:" />
+					<h:inputText id="email" value="#{logingBacking.email}"
+						autocomplete="on" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message styleClass="warning" for="email" />
+
+					<h:outputText value="Contraseña:" />
+					<h:inputSecret password="password" autocomplete="on" id="password"
+						value="#{logingBacking.password}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="password" styleClass="warning" />
+
+					<h:commandButton action="#{logingBacking.login}" value="Login" />
+					<h:commandButton action="#{logingBacking.olvidePassword}"
+						immediate="true" value="Olvide la Contraseña" />
+					<rich:spacer />
+
+					<h:commandButton action="registrarUsuario" immediate="true"
+						value="Registrar Usuario" />
+
+				</h:panelGrid>
+			</rich:panel>
+		</a4j:form>
+	</ui:define>
+</ui:composition>

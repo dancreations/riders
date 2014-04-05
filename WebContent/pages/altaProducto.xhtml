@@ -1,0 +1,55 @@
+<ui:composition template="../casoDeUsoTemplate.xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="cubody">
+
+		<rich:panel style="width:180px;text-align:left;">
+			<f:facet name="header">
+				<h:outputText value="Registrar Producto" />
+			</f:facet>
+
+			<h:panelGrid id="altaProducto">
+
+				<h:outputText value="Marca:" />
+				<h:inputText id="marca" value="#{altaUsuarioBacking.usuario.email}" />
+				<rich:message for="marca" />
+
+				<h:outputText value="Contraseña:" />
+				<h:inputSecret id="password"
+					value="#{altaUsuarioBacking.usuario.password}" />
+				<rich:message for="password" />
+
+				<h:outputText value="Nombre:" />
+				<h:inputText id="nombre"
+					value="#{altaUsuarioBacking.usuario.nombre}" />
+				<rich:message for="nombre" />
+
+				<h:outputText value="Apellido:" />
+				<h:inputText id="apellido"
+					value="#{altaUsuarioBacking.usuario.apellido}" />
+				<rich:message for="apellido" />
+
+				<h:outputText value="Razón Social:" />
+				<h:inputText id="razonSocial"
+					value="#{altaUsuarioBacking.usuario.razonSocial}" />
+				<rich:message for="razonSocial" />
+
+				<h:outputText value="Telefono:" />
+				<h:inputText id="telefono"
+					value="#{altaUsuarioBacking.usuario.telefono}" />
+				<rich:message for="telefono" />
+
+
+				<a4j:commandButton action="#{altaUsuarioBacking.generarAlta}"
+					value="Registrar Usuario" />
+
+
+			</h:panelGrid>
+		</rich:panel>
+
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,102 @@
+<!-- template-client.xhtml -->
+<!-- content above will be trimmed -->
+<ui:composition template="../template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:define name="body">
+		<a4j:form id="registrarUsuario">
+			<rich:panel style="text-align:left;">
+				<f:facet name="header">
+					<h:outputText value="Registrar Usuario" />
+				</f:facet>
+
+				<h:panelGrid id="login" columns="3">
+
+					<h:outputText value="Email:" />
+					<h:inputText id="emailRegistrar" autocomplete="off"
+ 						value="#{altaUsuarioBacking.cliente.email}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="emailRegistrar" styleClass="warning" />
+
+					<h:outputText value="Contraseña:" />
+					<h:inputSecret id="passwordRegistrar" autocomplete="off"
+						value="#{altaUsuarioBacking.cliente.password}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="passwordRegistrar" styleClass="warning" />
+
+					<h:outputText value="Cuit/Cuil:" />
+					<h:inputText id="cuitCuil"
+						value="#{altaUsuarioBacking.cliente.cuitCuil}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="cuitCuil" styleClass="warning" />
+
+					<h:outputText value="Nombre:" />
+					<h:inputText id="nombre"
+						value="#{altaUsuarioBacking.cliente.nombre}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="nombre" styleClass="warning" />
+
+					<h:outputText value="Apellido:" />
+					<h:inputText id="apellido"
+						value="#{altaUsuarioBacking.cliente.apellido}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="apellido" styleClass="warning" />
+
+					<h:outputText value="Razón Social:" />
+					<h:inputText id="razonSocial"
+						value="#{altaUsuarioBacking.cliente.razonSocial}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="razonSocial" styleClass="warning" />
+
+					<h:outputText value="Telefono:" />
+					<h:inputText id="telefono"
+						value="#{altaUsuarioBacking.cliente.telefono}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="telefono" styleClass="warning" />
+
+					<h:outputText value="Domicilio:" />
+					<h:outputText value="Calle:" />
+					<h:inputText id="calle"
+						value="#{altaUsuarioBacking.domicilio.calle}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="calle" styleClass="warning" />
+
+					<h:outputText value="Numero" />
+					<h:inputText id="numero"
+						value="#{altaUsuarioBacking.domicilio.numero}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="numero" styleClass="warning" />
+
+					<h:outputText value="Localidad:" />
+					<h:inputText id="localidad"
+						value="#{altaUsuarioBacking.domicilio.localidad}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="localidad" styleClass="warning" />
+
+					<h:outputText value="Provincia:" />
+					<h:inputText id="provincia"
+						value="#{altaUsuarioBacking.domicilio.provincia}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="provincia" styleClass="warning" />
+
+					<h:outputText value="Codigo Postal:" />
+					<h:inputText id="codigoPostal"
+						value="#{altaUsuarioBacking.domicilio.codigoPostal}" required="true"
+						requiredMessage="Campo Obligatorio" />
+					<rich:message for="codigoPostal" styleClass="warning" />
+
+
+					<a4j:commandButton action="#{altaUsuarioBacking.generarAlta}"
+						value="Registrar Usuario" />
+
+
+				</h:panelGrid>
+			</rich:panel>
+		</a4j:form>
+	</ui:define>
+</ui:composition>
